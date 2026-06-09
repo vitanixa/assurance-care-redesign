@@ -205,16 +205,16 @@ export default function Careers() {
     <Layout>
 
       {/* ── HERO ── */}
-      <section className="relative bg-[#1E3F20] text-white overflow-hidden">
+      <section className="relative bg-[#082B4D] text-white overflow-hidden">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1576765608866-5b51046452be?auto=format&fit=crop&w=1800&q=60')] bg-cover bg-center opacity-10" />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#1E3F20]/80 to-[#1E3F20]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#082B4D]/80 to-[#082B4D]" />
         <div className="relative max-w-5xl mx-auto px-6 py-24 text-center space-y-5">
-          <span className="inline-block text-[10px] font-black text-[#E6A15C] uppercase tracking-widest border border-[#E6A15C]/30 px-3 py-1 rounded-full">
+          <span className="inline-block text-[10px] font-black text-[#0F8F88] uppercase tracking-widest border border-[#0F8F88]/30 px-3 py-1 rounded-full">
             Now Hiring — DFW Metroplex
           </span>
           <h1 className="text-4xl md:text-6xl font-black tracking-tight leading-tight">
             Care With Us.<br />
-            <span className="text-[#E6A15C]">Grow With Us.</span>
+            <span className="text-[#0F8F88]">Grow With Us.</span>
           </h1>
           <p className="text-slate-300 text-sm md:text-base max-w-xl mx-auto leading-relaxed">
             Join a compassionate, professional team making a real difference in the lives of seniors and families across the community.
@@ -222,7 +222,7 @@ export default function Careers() {
           <div className="flex flex-col sm:flex-row gap-3 justify-center pt-2">
             <a
               href="#openings"
-              className="inline-flex items-center gap-2 bg-[#E6A15C] text-white font-black text-sm px-6 py-3.5 rounded-xl hover:bg-[#d4904b] transition-colors shadow-lg"
+              className="inline-flex items-center gap-2 bg-[#0F8F88] text-white font-black text-sm px-6 py-3.5 rounded-xl hover:bg-[#d4904b] transition-colors shadow-lg"
             >
               View Open Positions <ArrowRight className="w-4 h-4" />
             </a>
@@ -244,7 +244,7 @@ export default function Careers() {
               ["24–48hr", "Response Time"],
             ].map(([val, label]) => (
               <div key={label} className="px-4">
-                <p className="text-xl md:text-2xl font-black text-[#E6A15C]">{val}</p>
+                <p className="text-xl md:text-2xl font-black text-[#0F8F88]">{val}</p>
                 <p className="text-[10px] text-slate-300 font-bold uppercase tracking-wider mt-0.5">{label}</p>
               </div>
             ))}
@@ -256,8 +256,8 @@ export default function Careers() {
       <section className="py-20 px-6 bg-white">
         <div className="max-w-6xl mx-auto space-y-12">
           <div className="text-center space-y-3 max-w-2xl mx-auto">
-            <span className="text-[10px] font-black text-[#E6A15C] uppercase tracking-widest">Why Work Here</span>
-            <h2 className="text-3xl md:text-4xl font-black text-[#1E3F20] tracking-tight">
+            <span className="text-[10px] font-black text-[#0F8F88] uppercase tracking-widest">Why Work Here</span>
+            <h2 className="text-3xl md:text-4xl font-black text-[#082B4D] tracking-tight">
               A Place Where Caregivers Thrive
             </h2>
             <p className="text-slate-500 text-sm leading-relaxed">
@@ -269,11 +269,11 @@ export default function Careers() {
               const Icon = b.icon;
               return (
                 <div key={b.title} className="flex gap-4 p-5 rounded-2xl border border-slate-100 bg-slate-50 hover:shadow-sm transition-all">
-                  <div className="w-10 h-10 rounded-xl bg-[#1E3F20] flex items-center justify-center shrink-0">
-                    <Icon className="w-5 h-5 text-[#E6A15C]" />
+                  <div className="w-10 h-10 rounded-xl bg-[#082B4D] flex items-center justify-center shrink-0">
+                    <Icon className="w-5 h-5 text-[#0F8F88]" />
                   </div>
                   <div>
-                    <h3 className="font-black text-sm text-[#1E3F20]">{b.title}</h3>
+                    <h3 className="font-black text-sm text-[#082B4D]">{b.title}</h3>
                     <p className="text-xs text-slate-500 mt-1 leading-relaxed">{b.desc}</p>
                   </div>
                 </div>
@@ -287,8 +287,8 @@ export default function Careers() {
       <section id="openings" className="py-20 px-6 bg-slate-50 border-y border-slate-100 scroll-mt-20">
         <div className="max-w-6xl mx-auto space-y-10">
           <div className="text-center space-y-3 max-w-2xl mx-auto">
-            <span className="text-[10px] font-black text-[#E6A15C] uppercase tracking-widest">Active Openings</span>
-            <h2 className="text-3xl md:text-4xl font-black text-[#1E3F20] tracking-tight">
+            <span className="text-[10px] font-black text-[#0F8F88] uppercase tracking-widest">Active Openings</span>
+            <h2 className="text-3xl md:text-4xl font-black text-[#082B4D] tracking-tight">
               {jobs.length} Open Positions
             </h2>
             <p className="text-slate-500 text-sm leading-relaxed">
@@ -307,7 +307,7 @@ export default function Careers() {
                   {/* Card header */}
                   <div className="p-6 space-y-3">
                     <div className="flex items-start justify-between gap-3">
-                      <h3 className="font-black text-base text-[#1E3F20] leading-snug">{job.title}</h3>
+                      <h3 className="font-black text-base text-[#082B4D] leading-snug">{job.title}</h3>
                       <span className={`shrink-0 text-[9px] font-black px-2.5 py-1 rounded-full border uppercase tracking-wider ${categoryColors[job.category]}`}>
                         {job.category}
                       </span>
@@ -328,7 +328,7 @@ export default function Careers() {
                         <ul className="space-y-1.5">
                           {job.responsibilities.map((r, i) => (
                             <li key={i} className="flex items-start gap-2 text-xs text-slate-600">
-                              <Check className="w-3.5 h-3.5 text-[#E6A15C] shrink-0 mt-0.5" />
+                              <Check className="w-3.5 h-3.5 text-[#0F8F88] shrink-0 mt-0.5" />
                               {r}
                             </li>
                           ))}
@@ -339,7 +339,7 @@ export default function Careers() {
                         <ul className="space-y-1.5">
                           {job.requirements.map((r, i) => (
                             <li key={i} className="flex items-start gap-2 text-xs text-slate-600">
-                              <Check className="w-3.5 h-3.5 text-[#1E3F20] shrink-0 mt-0.5" />
+                              <Check className="w-3.5 h-3.5 text-[#082B4D] shrink-0 mt-0.5" />
                               {r}
                             </li>
                           ))}
@@ -350,7 +350,7 @@ export default function Careers() {
                           href={job.descUrl}
                           target="_blank"
                           rel="noreferrer"
-                          className="inline-flex items-center gap-1.5 text-xs font-bold text-[#1E3F20] underline underline-offset-2 hover:text-[#E6A15C] transition-colors"
+                          className="inline-flex items-center gap-1.5 text-xs font-bold text-[#082B4D] underline underline-offset-2 hover:text-[#0F8F88] transition-colors"
                         >
                           Download Full Job Description PDF <ArrowRight className="w-3 h-3" />
                         </a>
@@ -362,12 +362,12 @@ export default function Careers() {
                   <div className="mt-auto px-6 py-4 border-t border-slate-50 flex items-center justify-between gap-3">
                     <button
                       onClick={() => setExpandedId(open ? null : job.id)}
-                      className="flex items-center gap-1 text-xs font-bold text-slate-400 hover:text-[#1E3F20] transition-colors"
+                      className="flex items-center gap-1 text-xs font-bold text-slate-400 hover:text-[#082B4D] transition-colors"
                     >
                       {open ? <><ChevronUp className="w-4 h-4" /> Hide Details</> : <><ChevronDown className="w-4 h-4" /> View Details</>}
                     </button>
                     <Link href={`/apply?position=${encodeURIComponent(job.title)}`}>
-                      <span className="inline-flex items-center gap-1.5 bg-[#1E3F20] text-white text-xs font-black px-4 py-2.5 rounded-xl hover:bg-[#2e5230] transition-colors shadow-sm cursor-pointer">
+                      <span className="inline-flex items-center gap-1.5 bg-[#082B4D] text-white text-xs font-black px-4 py-2.5 rounded-xl hover:bg-[#0B7772] transition-colors shadow-sm cursor-pointer">
                         Apply Now <ArrowRight className="w-3.5 h-3.5" />
                       </span>
                     </Link>
@@ -380,9 +380,9 @@ export default function Careers() {
       </section>
 
       {/* ── BOTTOM CTA ── */}
-      <section className="py-16 px-6 bg-[#1E3F20] text-white text-center">
+      <section className="py-16 px-6 bg-[#082B4D] text-white text-center">
         <div className="max-w-2xl mx-auto space-y-4">
-          <Sparkles className="w-8 h-8 text-[#E6A15C] mx-auto" />
+          <Sparkles className="w-8 h-8 text-[#0F8F88] mx-auto" />
           <h2 className="text-2xl md:text-3xl font-black tracking-tight">
             Don't See the Right Fit?
           </h2>
@@ -391,7 +391,7 @@ export default function Careers() {
           </p>
           <div className="flex flex-col sm:flex-row gap-3 justify-center pt-2">
             <Link href="/apply">
-              <span className="inline-flex items-center gap-2 bg-[#E6A15C] text-white font-black text-sm px-6 py-3.5 rounded-xl hover:bg-[#d4904b] transition-colors shadow-lg cursor-pointer">
+              <span className="inline-flex items-center gap-2 bg-[#0F8F88] text-white font-black text-sm px-6 py-3.5 rounded-xl hover:bg-[#d4904b] transition-colors shadow-lg cursor-pointer">
                 Submit General Application <ArrowRight className="w-4 h-4" />
               </span>
             </Link>

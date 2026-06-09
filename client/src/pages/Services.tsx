@@ -54,7 +54,7 @@ export default function Services() {
         "Medication Reminders",
         "Patient Advocate & Hospital Sitting"
       ],
-      color: "border-[#E6A15C] bg-[#E6A15C]/5"
+      color: "border-[#0F8F88] bg-[#0F8F88]/5"
     },
     {
       level: "Level 2",
@@ -69,7 +69,7 @@ export default function Services() {
         "Specialized Diet Planning",
         "Structured Daily Care Logs"
       ],
-      color: "border-[#1E3F20] bg-[#1E3F20]/5"
+      color: "border-[#082B4D] bg-[#082B4D]/5"
     },
     {
       level: "Level 3",
@@ -91,10 +91,10 @@ export default function Services() {
   return (
     <Layout>
       {/* Services Hero */}
-      <section className="bg-[#1E3F20] text-white py-20 px-6 relative overflow-hidden shrink-0">
-        <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#E6A15C]/10 rounded-full blur-3xl"></div>
+      <section className="bg-[#082B4D] text-white py-20 px-6 relative overflow-hidden shrink-0">
+        <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#0F8F88]/10 rounded-full blur-3xl"></div>
         <div className="max-w-4xl mx-auto text-center space-y-4 relative z-10">
-          <span className="text-[10px] font-extrabold text-[#E6A15C] uppercase tracking-widest">Our Care Architecture</span>
+          <span className="text-[10px] font-extrabold text-[#0F8F88] uppercase tracking-widest">Our Care Architecture</span>
           <h1 className="text-3xl md:text-5xl font-black font-serif tracking-tight leading-tight">
             Personalized Home Care Solutions
           </h1>
@@ -107,8 +107,8 @@ export default function Services() {
       {/* Care Tiers / Levels Section */}
       <section className="py-20 px-6 max-w-7xl mx-auto space-y-12">
         <div className="text-center space-y-3 max-w-2xl mx-auto">
-          <span className="text-[10px] font-extrabold text-[#E6A15C] uppercase tracking-widest">Structured Care Plans</span>
-          <h2 className="text-3xl md:text-4xl font-black font-serif text-[#1E3F20] tracking-tight">
+          <span className="text-[10px] font-extrabold text-[#0F8F88] uppercase tracking-widest">Structured Care Plans</span>
+          <h2 className="text-3xl md:text-4xl font-black font-serif text-[#082B4D] tracking-tight">
             Three Progressive Levels of Care
           </h2>
           <p className="text-slate-500 text-xs md:text-sm">
@@ -124,18 +124,18 @@ export default function Services() {
             >
               <div className="space-y-4">
                 <div className="flex justify-between items-center">
-                  <span className="text-[10px] font-black uppercase tracking-widest text-[#E6A15C] bg-[#1E3F20] text-white px-3 py-1 rounded-full">
+                  <span className="text-[10px] font-black uppercase tracking-widest text-[#0F8F88] bg-[#082B4D] text-white px-3 py-1 rounded-full">
                     {tier.level}
                   </span>
                 </div>
-                <h3 className="text-lg font-black text-[#1E3F20]">{tier.title}</h3>
+                <h3 className="text-lg font-black text-[#082B4D]">{tier.title}</h3>
                 <p className="text-slate-600 text-xs leading-relaxed">{tier.desc}</p>
                 
                 <div className="border-t border-slate-200/60 pt-4 space-y-2.5">
                   <span className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">Key Care Features</span>
                   {tier.features.map((feat, fIdx) => (
                     <div key={fIdx} className="flex items-start gap-2.5 text-xs text-slate-700">
-                      <CheckCircle2 className="w-4 h-4 text-[#1E3F20] shrink-0 mt-0.5" />
+                      <CheckCircle2 className="w-4 h-4 text-[#082B4D] shrink-0 mt-0.5" />
                       <span>{feat}</span>
                     </div>
                   ))}
@@ -143,7 +143,7 @@ export default function Services() {
               </div>
 
               <Link href="/contact" className="pt-6 block">
-                <button className="w-full bg-[#1E3F20] text-white text-xs font-bold py-3.5 rounded-xl hover:bg-[#2e5230] shadow-md transition-all cursor-pointer flex items-center justify-center gap-1.5">
+                <button className="w-full bg-[#082B4D] text-white text-xs font-bold py-3.5 rounded-xl hover:bg-[#0B7772] shadow-md transition-all cursor-pointer flex items-center justify-center gap-1.5">
                   Request {tier.level} Assessment <ArrowRight className="w-4 h-4" />
                 </button>
               </Link>
@@ -156,8 +156,8 @@ export default function Services() {
       <section className="bg-slate-50 py-20 px-6 border-y border-slate-100">
         <div className="max-w-7xl mx-auto space-y-12">
           <div className="text-center space-y-3 max-w-2xl mx-auto">
-            <span className="text-[10px] font-extrabold text-[#E6A15C] uppercase tracking-widest">Full Service Catalog</span>
-            <h2 className="text-3xl md:text-4xl font-black font-serif text-[#1E3F20] tracking-tight">
+            <span className="text-[10px] font-extrabold text-[#0F8F88] uppercase tracking-widest">Full Service Catalog</span>
+            <h2 className="text-3xl md:text-4xl font-black font-serif text-[#082B4D] tracking-tight">
               Every Aspect of Daily Care Covered
             </h2>
             <p className="text-slate-500 text-xs md:text-sm">
@@ -169,14 +169,14 @@ export default function Services() {
             {coreServices.map((svc, idx) => (
               <div 
                 key={idx} 
-                className="bg-white border border-slate-100 rounded-xl p-5 shadow-sm space-y-3 hover:border-[#1E3F20]/20 transition-all group"
+                className="bg-white border border-slate-100 rounded-xl p-5 shadow-sm space-y-3 hover:border-[#082B4D]/20 transition-all group"
               >
                 <div className="flex justify-between items-center">
-                  <span className="text-[8px] font-extrabold text-[#E6A15C] bg-[#1E3F20]/5 px-2.5 py-1 rounded-full uppercase tracking-wider">
+                  <span className="text-[8px] font-extrabold text-[#0F8F88] bg-[#082B4D]/5 px-2.5 py-1 rounded-full uppercase tracking-wider">
                     {svc.category}
                   </span>
                 </div>
-                <h4 className="text-sm font-extrabold text-[#1E3F20]">{svc.title}</h4>
+                <h4 className="text-sm font-extrabold text-[#082B4D]">{svc.title}</h4>
                 <p className="text-slate-500 text-[11px] leading-relaxed">{svc.desc}</p>
               </div>
             ))}
@@ -186,16 +186,16 @@ export default function Services() {
 
       {/* Clinical Assessment Callout */}
       <section className="py-20 px-6 max-w-5xl mx-auto text-center space-y-6">
-        <div className="w-12 h-12 rounded-full bg-[#1E3F20]/5 flex items-center justify-center text-[#1E3F20] mx-auto">
+        <div className="w-12 h-12 rounded-full bg-[#082B4D]/5 flex items-center justify-center text-[#082B4D] mx-auto">
           <ClipboardList className="w-6 h-6" />
         </div>
-        <h2 className="text-2xl md:text-3xl font-black font-serif text-[#1E3F20]">Need a Customized Assessment?</h2>
+        <h2 className="text-2xl md:text-3xl font-black font-serif text-[#082B4D]">Need a Customized Assessment?</h2>
         <p className="text-slate-600 text-xs md:text-sm max-w-xl mx-auto leading-relaxed">
           Finding the right level of care can feel overwhelming. Our Care Specialists will guide you every step of the way, beginning with an in-depth, complimentary in-home care assessment.
         </p>
         <div className="pt-2">
           <Link href="/contact">
-            <button className="bg-[#1E3F20] text-white text-xs font-bold px-6 py-4 rounded-xl shadow-lg hover:bg-[#2e5230] hover:scale-[1.02] transition-all cursor-pointer">
+            <button className="bg-[#082B4D] text-white text-xs font-bold px-6 py-4 rounded-xl shadow-lg hover:bg-[#0B7772] hover:scale-[1.02] transition-all cursor-pointer">
               Schedule Free In-Home Assessment
             </button>
           </Link>

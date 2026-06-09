@@ -36,10 +36,10 @@ export default function Contact() {
   return (
     <Layout>
       {/* Contact Hero */}
-      <section className="bg-[#1E3F20] text-white py-20 px-6 relative overflow-hidden shrink-0">
-        <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#E6A15C]/10 rounded-full blur-3xl"></div>
+      <section className="bg-[#082B4D] text-white py-20 px-6 relative overflow-hidden shrink-0">
+        <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#0F8F88]/10 rounded-full blur-3xl"></div>
         <div className="max-w-4xl mx-auto text-center space-y-4 relative z-10">
-          <span className="text-[10px] font-extrabold text-[#E6A15C] uppercase tracking-widest">Get In Touch</span>
+          <span className="text-[10px] font-extrabold text-[#0F8F88] uppercase tracking-widest">Get In Touch</span>
           <h1 className="text-3xl md:text-5xl font-black font-serif tracking-tight leading-tight">
             Contact Assurance Care
           </h1>
@@ -54,8 +54,8 @@ export default function Contact() {
         {/* Contact Info Column */}
         <div className="lg:col-span-5 space-y-8">
           <div className="space-y-3">
-            <span className="text-[10px] font-extrabold text-[#E6A15C] uppercase tracking-widest">Always Available</span>
-            <h2 className="text-3xl font-black font-serif text-[#1E3F20] tracking-tight leading-tight">
+            <span className="text-[10px] font-extrabold text-[#0F8F88] uppercase tracking-widest">Always Available</span>
+            <h2 className="text-3xl font-black font-serif text-[#082B4D] tracking-tight leading-tight">
               We're Here For You 24/7
             </h2>
             <p className="text-slate-600 text-xs leading-relaxed">
@@ -66,42 +66,42 @@ export default function Contact() {
           <div className="space-y-6">
             {/* Phone Numbers */}
             <div className="bg-white border border-slate-100 p-5 rounded-xl shadow-sm space-y-3">
-              <h4 className="text-xs font-black text-[#1E3F20] uppercase tracking-wider flex items-center gap-2">
-                <Phone className="w-4.5 h-4.5 text-[#E6A15C]" /> Talk to Sales & Support
+              <h4 className="text-xs font-black text-[#082B4D] uppercase tracking-wider flex items-center gap-2">
+                <Phone className="w-4.5 h-4.5 text-[#0F8F88]" /> Talk to Sales & Support
               </h4>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs font-bold text-slate-700">
                 <div className="space-y-0.5">
                   <span className="text-[9px] text-slate-400 block uppercase tracking-wider">Main Office</span>
-                  <a href="tel:+14302570296" className="text-[#1E3F20] hover:text-[#E6A15C] transition-colors">+1 (430) 257-0296</a>
+                  <a href="tel:+14302570296" className="text-[#082B4D] hover:text-[#0F8F88] transition-colors">+1 (430) 257-0296</a>
                 </div>
                 <div className="space-y-0.5">
                   <span className="text-[9px] text-slate-400 block uppercase tracking-wider">Support Line</span>
-                  <a href="tel:+16156492231" className="text-[#1E3F20] hover:text-[#E6A15C] transition-colors">+1 (615) 649-2231</a>
+                  <a href="tel:+16156492231" className="text-[#082B4D] hover:text-[#0F8F88] transition-colors">+1 (615) 649-2231</a>
                 </div>
               </div>
             </div>
 
             {/* Email Addresses */}
             <div className="bg-white border border-slate-100 p-5 rounded-xl shadow-sm space-y-3">
-              <h4 className="text-xs font-black text-[#1E3F20] uppercase tracking-wider flex items-center gap-2">
-                <Mail className="w-4.5 h-4.5 text-[#E6A15C]" /> Email Communications
+              <h4 className="text-xs font-black text-[#082B4D] uppercase tracking-wider flex items-center gap-2">
+                <Mail className="w-4.5 h-4.5 text-[#0F8F88]" /> Email Communications
               </h4>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs font-bold text-slate-700">
                 <div className="space-y-0.5">
                   <span className="text-[9px] text-slate-400 block uppercase tracking-wider">Corporate Support</span>
-                  <a href="mailto:support@assurancecarellc.com" className="text-[#1E3F20] hover:text-[#E6A15C] transition-colors">support@assurancecarellc.com</a>
+                  <a href="mailto:support@assurancecarellc.com" className="text-[#082B4D] hover:text-[#0F8F88] transition-colors">support@assurancecarellc.com</a>
                 </div>
                 <div className="space-y-0.5">
                   <span className="text-[9px] text-slate-400 block uppercase tracking-wider">General Inquiries</span>
-                  <a href="mailto:assurancecare.24@gmail.com" className="text-[#1E3F20] hover:text-[#E6A15C] transition-colors">assurancecare.24@gmail.com</a>
+                  <a href="mailto:assurancecare.24@gmail.com" className="text-[#082B4D] hover:text-[#0F8F88] transition-colors">assurancecare.24@gmail.com</a>
                 </div>
               </div>
             </div>
 
             {/* Fax Lines */}
             <div className="bg-white border border-slate-100 p-5 rounded-xl shadow-sm space-y-3">
-              <h4 className="text-xs font-black text-[#1E3F20] uppercase tracking-wider flex items-center gap-2">
-                <ShieldCheck className="w-4.5 h-4.5 text-[#E6A15C]" /> Secure Fax Lines
+              <h4 className="text-xs font-black text-[#082B4D] uppercase tracking-wider flex items-center gap-2">
+                <ShieldCheck className="w-4.5 h-4.5 text-[#0F8F88]" /> Secure Fax Lines
               </h4>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs font-bold text-slate-700">
                 <div className="space-y-0.5">
@@ -121,7 +121,7 @@ export default function Contact() {
         <div className="lg:col-span-7 bg-white border border-slate-100 p-6 md:p-8 rounded-2xl shadow-xl">
           {!submitted ? (
             <form onSubmit={handleSubmit} className="space-y-5">
-              <h3 className="text-lg font-black text-[#1E3F20] border-b border-slate-100 pb-3">Schedule Free Assessment</h3>
+              <h3 className="text-lg font-black text-[#082B4D] border-b border-slate-100 pb-3">Schedule Free Assessment</h3>
               
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="space-y-1.5">
@@ -132,7 +132,7 @@ export default function Contact() {
                     value={formData.firstName}
                     onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
                     placeholder="e.g., John"
-                    className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-xs font-semibold focus:outline-none focus:ring-1 focus:ring-[#1E3F20]"
+                    className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-xs font-semibold focus:outline-none focus:ring-1 focus:ring-[#082B4D]"
                   />
                 </div>
                 <div className="space-y-1.5">
@@ -142,7 +142,7 @@ export default function Contact() {
                     value={formData.lastName}
                     onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
                     placeholder="e.g., Doe"
-                    className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-xs font-semibold focus:outline-none focus:ring-1 focus:ring-[#1E3F20]"
+                    className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-xs font-semibold focus:outline-none focus:ring-1 focus:ring-[#082B4D]"
                   />
                 </div>
               </div>
@@ -156,7 +156,7 @@ export default function Contact() {
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     placeholder="e.g., john.doe@example.com"
-                    className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-xs font-semibold focus:outline-none focus:ring-1 focus:ring-[#1E3F20]"
+                    className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-xs font-semibold focus:outline-none focus:ring-1 focus:ring-[#082B4D]"
                   />
                 </div>
                 <div className="space-y-1.5">
@@ -166,7 +166,7 @@ export default function Contact() {
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                     placeholder="e.g., +1 (430) 257-0296"
-                    className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-xs font-semibold focus:outline-none focus:ring-1 focus:ring-[#1E3F20]"
+                    className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-xs font-semibold focus:outline-none focus:ring-1 focus:ring-[#082B4D]"
                   />
                 </div>
               </div>
@@ -178,13 +178,13 @@ export default function Contact() {
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   placeholder="Tell us about your loved one's needs..."
-                  className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-xs font-semibold focus:outline-none focus:ring-1 focus:ring-[#1E3F20]"
+                  className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-xs font-semibold focus:outline-none focus:ring-1 focus:ring-[#082B4D]"
                 ></textarea>
               </div>
 
               <button 
                 type="submit"
-                className="w-full bg-[#1E3F20] text-white text-xs font-bold py-4 rounded-xl shadow-lg hover:bg-[#2e5230] hover:scale-[1.01] transition-all cursor-pointer flex items-center justify-center gap-2"
+                className="w-full bg-[#082B4D] text-white text-xs font-bold py-4 rounded-xl shadow-lg hover:bg-[#0B7772] hover:scale-[1.01] transition-all cursor-pointer flex items-center justify-center gap-2"
               >
                 Send Request <Send className="w-4 h-4" />
               </button>
@@ -194,7 +194,7 @@ export default function Contact() {
               <div className="w-12 h-12 rounded-full bg-emerald-50 text-emerald-600 flex items-center justify-center mx-auto">
                 <Check className="w-6 h-6" />
               </div>
-              <h3 className="text-lg font-black text-[#1E3F20]">Message Sent!</h3>
+              <h3 className="text-lg font-black text-[#082B4D]">Message Sent!</h3>
               <p className="text-slate-500 text-xs max-w-sm mx-auto leading-relaxed">
                 Thank you for contacting us, {formData.firstName}. Our care specialist will reach out to you shortly to coordinate your complimentary in-home assessment.
               </p>

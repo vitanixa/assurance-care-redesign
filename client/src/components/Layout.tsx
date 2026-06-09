@@ -21,7 +21,7 @@ export default function Layout({ children }: LayoutProps) {
   ];
 
   return (
-    <div className="min-h-screen bg-[#FAF9F6] text-slate-900 flex flex-col font-sans selection:bg-[#E6A15C]/20 selection:text-[#082B4D]">
+    <div className="min-h-screen bg-[#FAF9F6] text-slate-900 flex flex-col font-sans selection:bg-[#0F8F88]/20 selection:text-[#082B4D]">
       {/* Trust Indicator Banner */}
       <div className="bg-[#082B4D] text-[#FAF9F6] py-2 px-6 text-[11px] md:text-xs font-semibold border-b border-[#0F8F88]/20 shrink-0 shadow-inner">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
@@ -78,7 +78,7 @@ export default function Layout({ children }: LayoutProps) {
               <span>+1 (430) 257-0296</span>
             </a>
             <Link href="/contact">
-              <button className="bg-[#082B4D] text-white text-xs font-bold px-5 py-2.5 rounded-lg shadow-md shadow-[#1E3F20]/10 hover:bg-[#0F8F88] hover:scale-[1.02] active:scale-[0.98] transition-all duration-150 cursor-pointer">
+              <button className="bg-[#082B4D] text-white text-xs font-bold px-5 py-2.5 rounded-lg shadow-md shadow-[#082B4D]/10 hover:bg-[#0F8F88] hover:scale-[1.02] active:scale-[0.98] transition-all duration-150 cursor-pointer">
                 Free Assessment
               </button>
             </Link>

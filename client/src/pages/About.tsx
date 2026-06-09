@@ -25,10 +25,10 @@ export default function About() {
   return (
     <Layout>
       {/* About Hero */}
-      <section className="bg-[#1E3F20] text-white py-20 px-6 relative overflow-hidden shrink-0">
-        <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#E6A15C]/10 rounded-full blur-3xl"></div>
+      <section className="bg-[#082B4D] text-white py-20 px-6 relative overflow-hidden shrink-0">
+        <div className="absolute top-0 right-1/4 w-96 h-96 bg-[#0F8F88]/10 rounded-full blur-3xl"></div>
         <div className="max-w-4xl mx-auto text-center space-y-4 relative z-10">
-          <span className="text-[10px] font-extrabold text-[#E6A15C] uppercase tracking-widest">Our Legacy & Mission</span>
+          <span className="text-[10px] font-extrabold text-[#0F8F88] uppercase tracking-widest">Our Legacy & Mission</span>
           <h1 className="text-3xl md:text-5xl font-black font-serif tracking-tight leading-tight">
             About Assurance Care LLC
           </h1>
@@ -41,8 +41,8 @@ export default function About() {
       {/* History & Mission Statement */}
       <section className="py-20 px-6 max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
         <div className="lg:col-span-7 space-y-6">
-          <span className="text-[10px] font-extrabold text-[#E6A15C] uppercase tracking-widest">Founded in 2023</span>
-          <h2 className="text-3xl md:text-4xl font-black font-serif text-[#1E3F20] tracking-tight">
+          <span className="text-[10px] font-extrabold text-[#0F8F88] uppercase tracking-widest">Founded in 2023</span>
+          <h2 className="text-3xl md:text-4xl font-black font-serif text-[#082B4D] tracking-tight">
             Enhancing the Quality of Life for Our Cherished Elderly
           </h2>
           <p className="text-slate-600 text-sm leading-relaxed">
@@ -65,8 +65,8 @@ export default function About() {
             />
             <div className="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur p-4 rounded-xl border border-slate-100 shadow-lg flex items-center justify-between">
               <div className="space-y-0.5">
-                <span className="text-[8px] font-bold text-[#1E3F20] uppercase tracking-widest">Active Status</span>
-                <p className="text-xs font-extrabold text-[#1E3F20]">Fully Licensed Provider</p>
+                <span className="text-[8px] font-bold text-[#082B4D] uppercase tracking-widest">Active Status</span>
+                <p className="text-xs font-extrabold text-[#082B4D]">Fully Licensed Provider</p>
               </div>
               <span className="w-2.5 h-2.5 bg-emerald-500 rounded-full animate-pulse"></span>
             </div>
@@ -78,8 +78,8 @@ export default function About() {
       <section className="bg-slate-50 py-20 px-6 border-y border-slate-100">
         <div className="max-w-7xl mx-auto space-y-12">
           <div className="text-center space-y-3 max-w-2xl mx-auto">
-            <span className="text-[10px] font-extrabold text-[#E6A15C] uppercase tracking-widest">Our Foundation</span>
-            <h2 className="text-3xl md:text-4xl font-black font-serif text-[#1E3F20] tracking-tight">
+            <span className="text-[10px] font-extrabold text-[#0F8F88] uppercase tracking-widest">Our Foundation</span>
+            <h2 className="text-3xl md:text-4xl font-black font-serif text-[#082B4D] tracking-tight">
               Values That Guide Our Care
             </h2>
             <p className="text-slate-500 text-xs md:text-sm">
@@ -95,10 +95,10 @@ export default function About() {
                   key={idx} 
                   className="bg-white border border-slate-100 rounded-2xl p-6 shadow-sm hover:shadow-md transition-all duration-200"
                 >
-                  <div className="w-10 h-10 rounded-xl bg-[#1E3F20]/5 flex items-center justify-center text-[#1E3F20]">
+                  <div className="w-10 h-10 rounded-xl bg-[#082B4D]/5 flex items-center justify-center text-[#082B4D]">
                     <IconComp className="w-5 h-5" />
                   </div>
-                  <h3 className="text-base font-extrabold text-[#1E3F20] mt-4">{val.title}</h3>
+                  <h3 className="text-base font-extrabold text-[#082B4D] mt-4">{val.title}</h3>
                   <p className="text-slate-500 text-xs mt-2 leading-relaxed">{val.desc}</p>
                 </div>
               );
@@ -110,8 +110,8 @@ export default function About() {
       {/* Verified Success Stories */}
       <section className="py-20 px-6 max-w-5xl mx-auto space-y-12">
         <div className="text-center space-y-3 max-w-2xl mx-auto">
-          <span className="text-[10px] font-extrabold text-[#E6A15C] uppercase tracking-widest">Client Success</span>
-          <h2 className="text-3xl md:text-4xl font-black font-serif text-[#1E3F20] tracking-tight">
+          <span className="text-[10px] font-extrabold text-[#0F8F88] uppercase tracking-widest">Client Success</span>
+          <h2 className="text-3xl md:text-4xl font-black font-serif text-[#082B4D] tracking-tight">
             What Families Are Saying
           </h2>
           <p className="text-slate-500 text-xs md:text-sm">
@@ -128,7 +128,7 @@ export default function About() {
               <p className="text-slate-600 text-xs md:text-sm italic leading-relaxed">
                 "Working with Assurance Care LLC has been a wonderful experience. Their personalized approach to care really stood out—they took the time to understand our needs and provided a caregiver who was the perfect match for my brother. The level of attention and empathy they show is unmatched!"
               </p>
-              <span className="font-extrabold text-xs text-[#1E3F20] block">— Maria T.</span>
+              <span className="font-extrabold text-xs text-[#082B4D] block">— Maria T.</span>
             </div>
           </div>
 
@@ -140,7 +140,7 @@ export default function About() {
               <p className="text-slate-600 text-xs md:text-sm italic leading-relaxed">
                 "Assurance Care LLC has been a true blessing for our family. Their team provided exceptional care for my elderly mother, always treating her with kindness and respect. They go above and beyond to ensure her needs are met, and their communication with us has been outstanding. I can’t recommend them enough!"
               </p>
-              <span className="font-extrabold text-xs text-[#1E3F20] block">— Lisa R.</span>
+              <span className="font-extrabold text-xs text-[#082B4D] block">— Lisa R.</span>
             </div>
           </div>
         </div>

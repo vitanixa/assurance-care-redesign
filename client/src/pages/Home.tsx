@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "wouter";
 import Layout from "../components/Layout";
-import AssuranceLogo from "../components/AssuranceLogo";
 import {
   ArrowRight,
   Bath,
@@ -56,10 +55,6 @@ export default function Home() {
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(15,143,136,0.16),transparent_34%),linear-gradient(90deg,#ffffff_0%,#ffffff_43%,rgba(8,43,77,0.05)_100%)]" />
         <div className="relative mx-auto grid min-h-[620px] max-w-7xl grid-cols-1 items-center gap-10 px-6 py-12 lg:grid-cols-12 lg:py-0">
           <div className="z-10 lg:col-span-5">
-            <div className="mb-8 hidden lg:block">
-              <AssuranceLogo />
-            </div>
-
             <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-[#0F8F88]/20 bg-white px-4 py-2 text-xs font-extrabold uppercase tracking-[0.18em] text-[#0F8F88] shadow-sm">
               <Star className="h-4 w-4 fill-[#0F8F88]" />
               Licensed • Insured • Trusted
