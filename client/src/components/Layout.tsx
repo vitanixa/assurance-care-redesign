@@ -1,18 +1,7 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "wouter";
-import { 
-  Heart, 
-  Menu, 
-  X, 
-  Phone, 
-  Mail, 
-  ShieldCheck, 
-  Award, 
-  Clock, 
-  ChevronRight,
-  Linkedin,
-  HeartHandshake
-} from "lucide-react";
+import { Menu, X, Phone, Mail, ShieldCheck, Award, Clock } from "lucide-react";
+import AssuranceLogo from "./AssuranceLogo";
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -32,22 +21,22 @@ export default function Layout({ children }: LayoutProps) {
   ];
 
   return (
-    <div className="min-h-screen bg-[#FAF9F6] text-slate-900 flex flex-col font-sans selection:bg-[#E6A15C]/20 selection:text-[#1E3F20]">
+    <div className="min-h-screen bg-[#FAF9F6] text-slate-900 flex flex-col font-sans selection:bg-[#E6A15C]/20 selection:text-[#082B4D]">
       {/* Trust Indicator Banner */}
-      <div className="bg-[#1E3F20] text-[#FAF9F6] py-2 px-6 text-[11px] md:text-xs font-semibold border-b border-[#1E3F20]/20 shrink-0 shadow-inner">
+      <div className="bg-[#082B4D] text-[#FAF9F6] py-2 px-6 text-[11px] md:text-xs font-semibold border-b border-[#0F8F88]/20 shrink-0 shadow-inner">
         <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
           <div className="flex items-center gap-2">
-            <ShieldCheck className="w-4 h-4 text-[#E6A15C] shrink-0" />
+            <ShieldCheck className="w-4 h-4 text-[#0F8F88] shrink-0" />
             <span>State Licensed, Fully Bonded & CPR-Certified Professional Home Care</span>
           </div>
           <div className="flex items-center gap-4 text-[#FAF9F6]/80 font-medium">
             <span className="flex items-center gap-1">
-              <Award className="w-3.5 h-3.5 text-[#E6A15C]" />
+              <Award className="w-3.5 h-3.5 text-[#0F8F88]" />
               All Caregivers are W-2 Employees
             </span>
             <span>•</span>
             <span className="flex items-center gap-1">
-              <Clock className="w-3.5 h-3.5 text-[#E6A15C]" />
+              <Clock className="w-3.5 h-3.5 text-[#0F8F88]" />
               24/7 Dedicated Family Support
             </span>
           </div>
@@ -59,14 +48,8 @@ export default function Layout({ children }: LayoutProps) {
         <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
           {/* Logo Brand */}
           <Link href="/">
-            <div className="flex items-center gap-3 cursor-pointer group">
-              <div className="w-11 h-11 rounded-xl bg-gradient-to-br from-[#1E3F20] to-[#2e5230] flex items-center justify-center text-white shadow-md shadow-[#1E3F20]/10 group-hover:scale-105 transition-all duration-200">
-                <HeartHandshake className="w-6 h-6 text-[#FAF9F6]" />
-              </div>
-              <div className="leading-none">
-                <span className="font-black text-lg tracking-tight text-[#1E3F20] block">ASSURANCE CARE</span>
-                <span className="text-[10px] font-bold text-[#E6A15C] uppercase tracking-widest block mt-0.5">Compassionate Excellence</span>
-              </div>
+            <div className="cursor-pointer">
+              <AssuranceLogo compact />
             </div>
           </Link>
 
@@ -76,10 +59,10 @@ export default function Layout({ children }: LayoutProps) {
               const isActive = location === link.href;
               return (
                 <Link key={link.href} href={link.href}>
-                  <span className={`pb-1 transition-all cursor-pointer border-b-2 hover:text-[#1E3F20] ${
+                  <span className={`pb-1 transition-all cursor-pointer border-b-2 hover:text-[#082B4D] ${
                     isActive 
-                      ? "text-[#1E3F20] border-[#1E3F20]" 
-                      : "border-transparent hover:border-[#E6A15C]/50"
+                      ? "text-[#082B4D] border-[#0F8F88]" 
+                      : "border-transparent hover:border-[#0F8F88]/50"
                   }`}>
                     {link.name}
                   </span>
@@ -90,12 +73,12 @@ export default function Layout({ children }: LayoutProps) {
 
           {/* Call to Action Button */}
           <div className="hidden lg:flex items-center gap-4">
-            <a href="tel:+14302570296" className="flex items-center gap-1.5 text-xs font-bold text-[#1E3F20] hover:text-[#E6A15C] transition-colors">
-              <Phone className="w-4 h-4 text-[#E6A15C]" />
+            <a href="tel:+14302570296" className="flex items-center gap-1.5 text-xs font-bold text-[#082B4D] hover:text-[#0F8F88] transition-colors">
+              <Phone className="w-4 h-4 text-[#0F8F88]" />
               <span>+1 (430) 257-0296</span>
             </a>
             <Link href="/contact">
-              <button className="bg-[#1E3F20] text-white text-xs font-bold px-5 py-2.5 rounded-lg shadow-md shadow-[#1E3F20]/10 hover:bg-[#2e5230] hover:scale-[1.02] active:scale-[0.98] transition-all duration-150 cursor-pointer">
+              <button className="bg-[#082B4D] text-white text-xs font-bold px-5 py-2.5 rounded-lg shadow-md shadow-[#1E3F20]/10 hover:bg-[#0F8F88] hover:scale-[1.02] active:scale-[0.98] transition-all duration-150 cursor-pointer">
                 Free Assessment
               </button>
             </Link>
@@ -121,7 +104,7 @@ export default function Layout({ children }: LayoutProps) {
                     <span 
                       onClick={() => setMobileMenuOpen(false)}
                       className={`py-1 block transition-all cursor-pointer ${
-                        isActive ? "text-[#1E3F20] border-l-4 border-[#1E3F20] pl-3" : "hover:text-[#1E3F20]"
+                        isActive ? "text-[#082B4D] border-l-4 border-[#0F8F88] pl-3" : "hover:text-[#082B4D]"
                       }`}
                     >
                       {link.name}
@@ -131,14 +114,14 @@ export default function Layout({ children }: LayoutProps) {
               })}
             </div>
             <div className="border-t border-slate-100 pt-4 flex flex-col gap-4">
-              <a href="tel:+14302570296" className="flex items-center gap-2 text-sm font-bold text-[#1E3F20]">
-                <Phone className="w-4 h-4 text-[#E6A15C]" />
+              <a href="tel:+14302570296" className="flex items-center gap-2 text-sm font-bold text-[#082B4D]">
+                <Phone className="w-4 h-4 text-[#0F8F88]" />
                 <span>+1 (430) 257-0296</span>
               </a>
               <Link href="/contact">
                 <button 
                   onClick={() => setMobileMenuOpen(false)}
-                  className="w-full bg-[#1E3F20] text-white text-sm font-bold py-3 rounded-lg shadow-md hover:bg-[#2e5230] transition-colors cursor-pointer"
+                  className="w-full bg-[#082B4D] text-white text-sm font-bold py-3 rounded-lg shadow-md hover:bg-[#0F8F88] transition-colors cursor-pointer"
                 >
                   Schedule Free Assessment
                 </button>
@@ -158,17 +141,12 @@ export default function Layout({ children }: LayoutProps) {
         <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-10">
           {/* Brand Info */}
           <div className="md:col-span-4 space-y-4">
-            <div className="flex items-center gap-2.5">
-              <div className="w-8 h-8 rounded-lg bg-[#1E3F20] flex items-center justify-center text-white shadow-sm">
-                <HeartHandshake className="w-5 h-5 text-[#FAF9F6]" />
-              </div>
-              <span className="font-extrabold text-white tracking-tight text-base">Assurance Care LLC</span>
-            </div>
+            <AssuranceLogo compact light />
             <p className="text-slate-400 leading-relaxed max-w-sm text-[11px] md:text-xs">
               Established with a heartfelt commitment to delivering exceptional, personalized home healthcare services. We promote comfort, dignity, and independence in the familiar surroundings of home.
             </p>
             <div className="flex items-center gap-3 text-[#FAF9F6]/80 text-[10px] pt-1">
-              <span className="px-2.5 py-1 rounded bg-slate-900 border border-slate-800 text-[#E6A15C] font-bold uppercase tracking-wider">
+              <span className="px-2.5 py-1 rounded bg-slate-900 border border-slate-800 text-[#0F8F88] font-bold uppercase tracking-wider">
                 State Licensed & Bonded
               </span>
             </div>
@@ -191,21 +169,21 @@ export default function Layout({ children }: LayoutProps) {
             <h4 className="font-extrabold text-white uppercase tracking-wider text-[11px]">Contact Info</h4>
             <div className="space-y-3 font-medium text-[11px] md:text-xs">
               <p className="flex items-start gap-2">
-                <Phone className="w-4 h-4 text-[#E6A15C] shrink-0 mt-0.5" />
+                <Phone className="w-4 h-4 text-[#0F8F88] shrink-0 mt-0.5" />
                 <span className="leading-tight">
-                  Office: <a href="tel:+14302570296" className="text-white hover:text-[#E6A15C] transition-colors">+1 (430) 257-0296</a><br/>
-                  Alt: <a href="tel:+16156492231" className="text-white hover:text-[#E6A15C] transition-colors">+1 (615) 649-2231</a>
+                  Office: <a href="tel:+14302570296" className="text-white hover:text-[#0F8F88] transition-colors">+1 (430) 257-0296</a><br/>
+                  Alt: <a href="tel:+16156492231" className="text-white hover:text-[#0F8F88] transition-colors">+1 (615) 649-2231</a>
                 </span>
               </p>
               <p className="flex items-start gap-2">
-                <Mail className="w-4 h-4 text-[#E6A15C] shrink-0 mt-0.5" />
+                <Mail className="w-4 h-4 text-[#0F8F88] shrink-0 mt-0.5" />
                 <span className="leading-tight">
-                  <a href="mailto:support@assurancecarellc.com" className="text-white hover:text-[#E6A15C] transition-colors">support@assurancecarellc.com</a><br/>
-                  <a href="mailto:assurancecare.24@gmail.com" className="text-white hover:text-[#E6A15C] transition-colors">assurancecare.24@gmail.com</a>
+                  <a href="mailto:support@assurancecarellc.com" className="text-white hover:text-[#0F8F88] transition-colors">support@assurancecarellc.com</a><br/>
+                  <a href="mailto:assurancecare.24@gmail.com" className="text-white hover:text-[#0F8F88] transition-colors">assurancecare.24@gmail.com</a>
                 </span>
               </p>
               <p className="flex items-start gap-2">
-                <ShieldCheck className="w-4 h-4 text-[#E6A15C] shrink-0 mt-0.5" />
+                <ShieldCheck className="w-4 h-4 text-[#0F8F88] shrink-0 mt-0.5" />
                 <span className="leading-tight">
                   Fax 1: 972-449-0760<br/>
                   Fax 2: 972-908-9082
