@@ -144,7 +144,7 @@ export default function Home() {
               </div>
             </div>
 
-            <a href="tel:+14302570296" className="absolute right-4 top-6 z-20 hidden items-center gap-2 rounded-full bg-[#0F8F88] px-6 py-3 text-base font-black text-white shadow-xl transition hover:bg-[#0B7772] lg:flex">
+            <a href="tel:+14302570296" className="absolute right-4 top-0 z-20 hidden items-center gap-2 rounded-full bg-[#0F8F88] px-5 py-2.5 text-sm font-black text-white shadow-xl transition hover:bg-[#0B7772] lg:flex">
               <Phone className="h-5 w-5" />
               (430) 257-0296
             </a>
