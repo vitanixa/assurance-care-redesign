@@ -83,15 +83,36 @@ export default function WhyUs() {
         </div>
 
         <div className="lg:col-span-5 relative flex justify-center">
-          <div className="relative w-full max-w-[360px] aspect-[4/5] rounded-2xl overflow-hidden border border-slate-100 shadow-2xl">
-            <img 
-              src="https://static.wixstatic.com/media/11062b_bff140366281447b99152d6112cafd32~mv2.jpg/v1/fill/w_1265,h_1308,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_bff140366281447b99152d6112cafd32~mv2.jpg" 
-              alt="Caregiver training" 
-              className="w-full h-full object-cover"
-            />
-            <div className="absolute bottom-4 left-4 right-4 bg-white/95 backdrop-blur p-4 rounded-xl border border-slate-100 shadow-lg space-y-1">
-              <span className="text-[8px] font-bold text-[#082B4D] uppercase tracking-widest">In-Depth Assessment</span>
-              <p className="text-xs font-black text-[#082B4D]">Evaluating physical & social needs prior to care</p>
+          <div className="relative w-full max-w-[420px] rounded-[2rem] border border-slate-100 bg-gradient-to-br from-white via-[#F4FBFA] to-[#E0F3F1] p-6 shadow-2xl overflow-hidden">
+            <div className="absolute -right-12 -top-12 h-40 w-40 rounded-full bg-[#0F8F88]/10" />
+            <div className="relative rounded-[1.5rem] bg-[#082B4D] p-6 text-white">
+              <div className="flex items-center gap-4">
+                <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-white/15">
+                  <ShieldCheck className="h-9 w-9 text-[#7EE0DA]" />
+                </div>
+                <div>
+                  <p className="text-[10px] font-extrabold uppercase tracking-[0.22em] text-[#7EE0DA]">Quality Standards</p>
+                  <h3 className="mt-1 font-serif text-3xl font-black">Why Families Trust Us</h3>
+                </div>
+              </div>
+              <div className="mt-8 space-y-3">
+                {["Caregiver screening", "Ongoing training", "Care-plan matching", "Family communication"].map((item) => (
+                  <div key={item} className="flex items-center gap-3 rounded-xl bg-white/10 px-4 py-3 text-sm font-bold">
+                    <Check className="h-4 w-4 text-[#7EE0DA]" />
+                    {item}
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="relative mt-5 grid grid-cols-2 gap-4">
+              <div className="rounded-2xl bg-white p-5 text-center shadow-sm">
+                <p className="text-3xl font-black text-[#0F8F88]">24</p>
+                <p className="mt-1 text-[10px] font-extrabold uppercase tracking-wide text-slate-500">Quality Checks</p>
+              </div>
+              <div className="rounded-2xl bg-white p-5 text-center shadow-sm">
+                <p className="text-3xl font-black text-[#0F8F88]">1:1</p>
+                <p className="mt-1 text-[10px] font-extrabold uppercase tracking-wide text-slate-500">Care Matching</p>
+              </div>
             </div>
           </div>
         </div>

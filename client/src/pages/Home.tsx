@@ -88,7 +88,7 @@ export default function Home() {
           <div className="relative lg:col-span-7 lg:h-[620px]">
             <div className="absolute right-0 top-0 hidden h-full w-[78%] rounded-bl-[90px] bg-gradient-to-br from-[#EDF6F5] via-[#F8FAFC] to-[#DCEDEA] lg:block" />
             <div className="relative ml-auto flex min-h-[480px] max-w-3xl items-end justify-center overflow-hidden rounded-[2rem] bg-gradient-to-br from-[#F5EFE7] via-white to-[#E0F3F1] p-8 shadow-2xl lg:h-[560px] lg:rounded-none lg:rounded-bl-[5rem] lg:bg-transparent lg:shadow-none">
-              <div className="absolute left-8 top-10 z-20 rounded-2xl border border-slate-100 bg-white/95 p-5 shadow-2xl backdrop-blur md:left-2 lg:left-0 lg:top-48">
+              <div className="absolute right-8 top-8 z-20 rounded-2xl border border-slate-100 bg-white/95 p-5 shadow-2xl backdrop-blur lg:right-10 lg:top-8">
                 <div className="rounded-xl bg-[#0F8F88] px-6 py-3 text-center text-5xl font-black text-white shadow-lg">A+</div>
                 <p className="mt-3 text-center text-lg font-black uppercase leading-none text-[#082B4D]">Rating</p>
                 <p className="mt-1 text-center text-xs font-semibold text-slate-500">Professional Care Standard</p>
@@ -99,7 +99,7 @@ export default function Home() {
                 </div>
               </div>
 
-              <div className="relative z-10 w-full max-w-xl rounded-[2rem] border border-white/70 bg-white/70 p-7 shadow-xl backdrop-blur-md lg:ml-24">
+              <div className="relative z-10 w-full max-w-xl rounded-[2rem] border border-white/70 bg-white/70 p-7 shadow-xl backdrop-blur-md lg:ml-24 lg:mt-24">
                 <div className="rounded-[1.5rem] bg-gradient-to-br from-[#082B4D] to-[#0F8F88] p-6 text-white">
                   <div className="flex items-center gap-4">
                     <div className="flex h-20 w-20 items-center justify-center rounded-full bg-white/20">
