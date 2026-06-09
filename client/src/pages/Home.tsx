@@ -15,7 +15,6 @@ import {
   Star,
   UserRoundCheck,
   Users,
-  Phone,
 } from "lucide-react";
 
 const services = [
@@ -53,7 +52,7 @@ export default function Home() {
     <Layout>
       <section className="relative overflow-hidden bg-[#F9FBFC]">
         <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(15,143,136,0.16),transparent_34%),linear-gradient(90deg,#ffffff_0%,#ffffff_43%,rgba(8,43,77,0.05)_100%)]" />
-        <div className="relative mx-auto grid min-h-[620px] max-w-7xl grid-cols-1 items-center gap-10 px-6 py-12 lg:grid-cols-12 lg:py-0">
+        <div className="relative mx-auto grid min-h-[620px] max-w-7xl grid-cols-1 items-center gap-12 px-6 py-14 lg:grid-cols-12 lg:py-0">
           <div className="z-10 lg:col-span-5">
             <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-[#0F8F88]/20 bg-white px-4 py-2 text-xs font-extrabold uppercase tracking-[0.18em] text-[#0F8F88] shadow-sm">
               <Star className="h-4 w-4 fill-[#0F8F88]" />
@@ -74,21 +73,21 @@ export default function Home() {
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
               <Link href="/services">
                 <button className="inline-flex items-center justify-center gap-2 rounded-lg bg-[#0F8F88] px-7 py-4 text-sm font-extrabold uppercase tracking-wide text-white shadow-xl shadow-[#0F8F88]/20 transition hover:-translate-y-0.5 hover:bg-[#0B7772]">
-                  Our Services <ArrowRight className="h-4 w-4" />
+                  View Services <ArrowRight className="h-4 w-4" />
                 </button>
               </Link>
               <Link href="/contact">
                 <button className="inline-flex items-center justify-center rounded-lg border-2 border-[#0F8F88] bg-white px-7 py-4 text-sm font-extrabold uppercase tracking-wide text-[#0F8F88] transition hover:-translate-y-0.5 hover:bg-[#F0FBFA]">
-                  Get Started
+                  Free Assessment
                 </button>
               </Link>
             </div>
           </div>
 
-          <div className="relative lg:col-span-7 lg:h-[620px]">
+          <div className="relative lg:col-span-7 lg:h-[620px] lg:pt-8">
             <div className="absolute right-0 top-0 hidden h-full w-[78%] rounded-bl-[90px] bg-gradient-to-br from-[#EDF6F5] via-[#F8FAFC] to-[#DCEDEA] lg:block" />
-            <div className="relative ml-auto flex min-h-[480px] max-w-3xl items-end justify-center overflow-hidden rounded-[2rem] bg-gradient-to-br from-[#F5EFE7] via-white to-[#E0F3F1] p-8 shadow-2xl lg:h-[560px] lg:rounded-none lg:rounded-bl-[5rem] lg:bg-transparent lg:shadow-none">
-              <div className="relative z-10 w-full max-w-xl rounded-[2rem] border border-white/70 bg-white/70 p-7 shadow-xl backdrop-blur-md lg:ml-24 lg:mt-24">
+            <div className="relative ml-auto flex min-h-[480px] max-w-3xl items-end justify-center overflow-hidden rounded-[2rem] bg-gradient-to-br from-[#F5EFE7] via-white to-[#E0F3F1] p-8 shadow-2xl lg:h-[540px] lg:rounded-none lg:rounded-bl-[5rem] lg:bg-transparent lg:shadow-none">
+              <div className="relative z-10 w-full max-w-xl rounded-[2rem] border border-white/70 bg-white/70 p-7 shadow-xl backdrop-blur-md lg:ml-24 lg:mt-12">
                 <div className="rounded-[1.5rem] bg-gradient-to-br from-[#082B4D] to-[#0F8F88] p-6 text-white">
                   <div className="flex items-center gap-4">
                     <div className="flex h-20 w-20 items-center justify-center rounded-full bg-white/20">
@@ -143,11 +142,6 @@ export default function Home() {
                 </div>
               </div>
             </div>
-
-            <a href="tel:+14302570296" className="absolute right-4 top-0 z-20 hidden items-center gap-2 rounded-full bg-[#0F8F88] px-5 py-2.5 text-sm font-black text-white shadow-xl transition hover:bg-[#0B7772] lg:flex">
-              <Phone className="h-4 w-4" />
-              Call 24/7 • (430) 257-0296
-            </a>
           </div>
         </div>
       </section>

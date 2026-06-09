@@ -23,13 +23,13 @@ export default function Layout({ children }: LayoutProps) {
   return (
     <div className="min-h-screen bg-[#FAF9F6] text-slate-900 flex flex-col font-sans selection:bg-[#0F8F88]/20 selection:text-[#082B4D]">
       {/* Trust Indicator Banner */}
-      <div className="bg-[#082B4D] text-[#FAF9F6] py-2 px-6 text-[11px] md:text-xs font-semibold border-b border-[#0F8F88]/20 shrink-0 shadow-inner">
-        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
+      <div className="bg-[#082B4D] text-[#FAF9F6] py-2.5 px-6 text-[11px] md:text-xs font-semibold border-b border-[#0F8F88]/20 shrink-0 shadow-inner">
+        <div className="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-3">
           <div className="flex items-center gap-2">
             <ShieldCheck className="w-4 h-4 text-[#0F8F88] shrink-0" />
             <span>State Licensed, Fully Bonded & CPR-Certified Professional Home Care</span>
           </div>
-          <div className="flex items-center gap-4 text-[#FAF9F6]/80 font-medium">
+          <div className="flex items-center gap-3 text-[#FAF9F6]/80 font-medium flex-wrap justify-center sm:justify-end">
             <span className="flex items-center gap-1">
               <Award className="w-3.5 h-3.5 text-[#0F8F88]" />
               All Caregivers are W-2 Employees
@@ -45,7 +45,7 @@ export default function Layout({ children }: LayoutProps) {
 
       {/* Main Sticky Header */}
       <header className="bg-white/95 backdrop-blur-md border-b border-slate-100 sticky top-0 z-50 transition-all duration-200">
-        <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between gap-6">
           {/* Logo Brand */}
           <Link href="/">
             <div className="cursor-pointer">
@@ -54,7 +54,7 @@ export default function Layout({ children }: LayoutProps) {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden lg:flex items-center gap-7 text-xs font-bold text-slate-600">
+          <nav className="hidden lg:flex items-center gap-6 text-xs font-bold text-slate-600">
             {navLinks.map((link) => {
               const isActive = location === link.href;
               return (
@@ -72,13 +72,13 @@ export default function Layout({ children }: LayoutProps) {
           </nav>
 
           {/* Call to Action Button */}
-          <div className="hidden lg:flex items-center gap-4">
+          <div className="hidden lg:flex items-center gap-3">
             <a href="tel:+14302570296" className="flex items-center gap-1.5 text-xs font-bold text-[#082B4D] hover:text-[#0F8F88] transition-colors">
               <Phone className="w-4 h-4 text-[#0F8F88]" />
               <span>+1 (430) 257-0296</span>
             </a>
             <Link href="/contact">
-              <button className="bg-[#082B4D] text-white text-xs font-bold px-5 py-2.5 rounded-lg shadow-md shadow-[#082B4D]/10 hover:bg-[#0F8F88] hover:scale-[1.02] active:scale-[0.98] transition-all duration-150 cursor-pointer">
+              <button className="bg-[#082B4D] text-white text-xs font-bold px-5 py-3 rounded-xl shadow-md shadow-[#082B4D]/10 hover:bg-[#0F8F88] hover:scale-[1.02] active:scale-[0.98] transition-all duration-150 cursor-pointer">
                 Free Assessment
               </button>
             </Link>
@@ -123,7 +123,7 @@ export default function Layout({ children }: LayoutProps) {
                   onClick={() => setMobileMenuOpen(false)}
                   className="w-full bg-[#082B4D] text-white text-sm font-bold py-3 rounded-lg shadow-md hover:bg-[#0F8F88] transition-colors cursor-pointer"
                 >
-                  Schedule Free Assessment
+                  Free Assessment
                 </button>
               </Link>
             </div>

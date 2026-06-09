@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "wouter";
 import { ArrowLeft, Phone, Mail, Clock, ShieldCheck } from "lucide-react";
+import AssuranceLogo from "../components/AssuranceLogo";
 
 const JOTFORM_URL = "https://form.jotform.com/260676874586072";
 const JOTFORM_FIELD = "position4";
@@ -28,15 +29,8 @@ export default function Apply() {
       <header className="sticky top-0 z-50 bg-white border-b border-slate-100 shadow-sm">
         <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between gap-4">
           <div className="flex items-center gap-3">
-            <img
-              src="https://static.wixstatic.com/media/618d86_89c9ddf4402143389ba68970dd50f0e0~mv2.jpg"
-              alt="Assurance Care LLC"
-              className="w-9 h-9 rounded-lg object-cover shadow-sm"
-            />
-            <div className="leading-tight">
-              <p className="text-xs font-black text-[#082B4D]">Assurance Care LLC</p>
-              <p className="text-[10px] text-slate-400 font-semibold">Employment Application</p>
-            </div>
+            <AssuranceLogo compact />
+            <span className="hidden sm:inline-flex rounded-full border border-[#0F8F88]/15 bg-[#F0FBFA] px-3 py-1 text-[10px] font-black uppercase tracking-wider text-[#0F8F88]">Employment Application</span>
           </div>
           <Link href="/careers">
             <span className="inline-flex items-center gap-1.5 text-xs font-bold text-slate-500 hover:text-[#082B4D] transition-colors cursor-pointer">

@@ -59,3 +59,12 @@ h1, h2, h3, h4, h5, h6, .font-serif {
     }
   }
 }
+
+
+html {
+  scroll-behavior: smooth;
+}
+
+button, a {
+  -webkit-tap-highlight-color: transparent;
+}
