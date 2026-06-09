@@ -7,6 +7,7 @@ import About from "./pages/About";
 import WhyUs from "./pages/WhyUs";
 import Services from "./pages/Services";
 import Careers from "./pages/Careers";
+import Apply from "./pages/Apply";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
@@ -19,6 +20,7 @@ function App() {
         <Route path="/why-us" component={WhyUs} />
         <Route path="/services" component={Services} />
         <Route path="/careers" component={Careers} />
+        <Route path="/apply" component={Apply} />
         <Route path="/contact" component={Contact} />
         <Route component={NotFound} />
       </Switch>
