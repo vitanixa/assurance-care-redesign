@@ -88,17 +88,6 @@ export default function Home() {
           <div className="relative lg:col-span-7 lg:h-[620px]">
             <div className="absolute right-0 top-0 hidden h-full w-[78%] rounded-bl-[90px] bg-gradient-to-br from-[#EDF6F5] via-[#F8FAFC] to-[#DCEDEA] lg:block" />
             <div className="relative ml-auto flex min-h-[480px] max-w-3xl items-end justify-center overflow-hidden rounded-[2rem] bg-gradient-to-br from-[#F5EFE7] via-white to-[#E0F3F1] p-8 shadow-2xl lg:h-[560px] lg:rounded-none lg:rounded-bl-[5rem] lg:bg-transparent lg:shadow-none">
-              <div className="absolute right-8 top-8 z-20 rounded-2xl border border-slate-100 bg-white/95 p-5 shadow-2xl backdrop-blur lg:right-10 lg:top-8">
-                <div className="rounded-xl bg-[#0F8F88] px-6 py-3 text-center text-5xl font-black text-white shadow-lg">A+</div>
-                <p className="mt-3 text-center text-lg font-black uppercase leading-none text-[#082B4D]">Rating</p>
-                <p className="mt-1 text-center text-xs font-semibold text-slate-500">Professional Care Standard</p>
-                <div className="my-4 h-px bg-[#0F8F88]/30" />
-                <div className="flex items-start gap-2 text-xs font-bold text-slate-700">
-                  <ShieldCheck className="h-5 w-5 shrink-0 text-[#0F8F88]" />
-                  <span>Licensed. Insured. Trusted.</span>
-                </div>
-              </div>
-
               <div className="relative z-10 w-full max-w-xl rounded-[2rem] border border-white/70 bg-white/70 p-7 shadow-xl backdrop-blur-md lg:ml-24 lg:mt-24">
                 <div className="rounded-[1.5rem] bg-gradient-to-br from-[#082B4D] to-[#0F8F88] p-6 text-white">
                   <div className="flex items-center gap-4">
@@ -136,6 +125,20 @@ export default function Home() {
                   <div className="rounded-2xl bg-white p-4 shadow-sm">
                     <p className="text-2xl font-black text-[#082B4D]">DFW</p>
                     <p className="mt-1 text-[10px] font-bold uppercase tracking-wide text-slate-500">Local Care</p>
+                  </div>
+                </div>
+
+                <div className="mt-4 flex flex-col gap-3 rounded-2xl border border-[#0F8F88]/15 bg-white p-4 shadow-sm sm:flex-row sm:items-center sm:justify-between">
+                  <div className="flex items-center gap-3">
+                    <div className="flex h-12 w-16 shrink-0 items-center justify-center rounded-xl bg-[#0F8F88] text-2xl font-black text-white shadow-md shadow-[#0F8F88]/20">A+</div>
+                    <div>
+                      <p className="text-sm font-black uppercase tracking-wide text-[#082B4D]">Professional Care Standard</p>
+                      <p className="text-xs font-semibold text-slate-500">Quality-focused support for families at home.</p>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-2 text-xs font-bold text-slate-700">
+                    <ShieldCheck className="h-5 w-5 shrink-0 text-[#0F8F88]" />
+                    <span>Licensed • Insured • Trusted</span>
                   </div>
                 </div>
               </div>
