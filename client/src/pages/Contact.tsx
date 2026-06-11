@@ -1,36 +1,52 @@
 import React, { useState } from "react";
 import Layout from "../components/Layout";
-import { 
-  Phone, 
-  Mail, 
-  ShieldCheck, 
-  Clock, 
-  Send, 
-  Check, 
-  MapPin, 
-  HeartHandshake,
-  Award
-} from "lucide-react";
+import { Phone, Mail, ShieldCheck, Send, Check } from "lucide-react";
 import { toast } from "sonner";
+
+const WEB3FORMS_KEY = "271240a2-1290-4b6d-b57b-6534c331623b";
 
 export default function Contact() {
   const [submitted, setSubmitted] = useState(false);
+  const [submitting, setSubmitting] = useState(false);
   const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    email: "",
-    phone: "",
-    message: ""
+    firstName: "", lastName: "", email: "", phone: "", message: ""
   });
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!formData.firstName || !formData.email) {
-      toast.error("Please fill in all required fields.");
+      toast.error("Please fill in your first name and email address.");
       return;
     }
-    setSubmitted(true);
-    toast.success("Message submitted successfully! Our care coordinator will contact you shortly.");
+    setSubmitting(true);
+    try {
+      const data = new FormData();
+      data.append("access_key", WEB3FORMS_KEY);
+      data.append("subject", `New Care Inquiry from ${formData.firstName} ${formData.lastName} — Assurance Care LLC`);
+      data.append("from_name", "Assurance Care Website");
+      data.append("botcheck", "");
+      data.append("name", `${formData.firstName} ${formData.lastName}`.trim());
+      data.append("email", formData.email);
+      data.append("phone", formData.phone || "Not provided");
+      data.append("message", formData.message || "No message provided");
+
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        body: data,
+      });
+      const result = await response.json().catch(() => ({}));
+      if (!response.ok || !result.success) throw new Error();
+      setSubmitted(true);
+      toast.success("Message sent! Our care coordinator will contact you shortly.");
+    } catch {
+      toast.error("Could not send. Please call (430) 257-0296 or email admin@assurancecarellc.com.");
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -64,10 +80,9 @@ export default function Contact() {
           </div>
 
           <div className="space-y-6">
-            {/* Phone Numbers */}
             <div className="bg-white border border-slate-100 p-5 rounded-xl shadow-sm space-y-3">
               <h4 className="text-xs font-black text-[#082B4D] uppercase tracking-wider flex items-center gap-2">
-                <Phone className="w-4.5 h-4.5 text-[#0F8F88]" /> Talk to Sales & Support
+                <Phone className="w-4 h-4 text-[#0F8F88]" /> Talk to Sales & Support
               </h4>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs font-bold text-slate-700">
                 <div className="space-y-0.5">
@@ -81,10 +96,9 @@ export default function Contact() {
               </div>
             </div>
 
-            {/* Email Addresses */}
             <div className="bg-white border border-slate-100 p-5 rounded-xl shadow-sm space-y-3">
               <h4 className="text-xs font-black text-[#082B4D] uppercase tracking-wider flex items-center gap-2">
-                <Mail className="w-4.5 h-4.5 text-[#0F8F88]" /> Email Communications
+                <Mail className="w-4 h-4 text-[#0F8F88]" /> Email Communications
               </h4>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs font-bold text-slate-700">
                 <div className="space-y-0.5">
@@ -93,15 +107,14 @@ export default function Contact() {
                 </div>
                 <div className="space-y-0.5">
                   <span className="text-[9px] text-slate-400 block uppercase tracking-wider">General Inquiries</span>
-                  <a href="mailto:assurancecare.24@gmail.com" className="text-[#082B4D] hover:text-[#0F8F88] transition-colors">assurancecare.24@gmail.com</a>
+                  <a href="mailto:admin@assurancecarellc.com" className="text-[#082B4D] hover:text-[#0F8F88] transition-colors">admin@assurancecarellc.com</a>
                 </div>
               </div>
             </div>
 
-            {/* Fax Lines */}
             <div className="bg-white border border-slate-100 p-5 rounded-xl shadow-sm space-y-3">
               <h4 className="text-xs font-black text-[#082B4D] uppercase tracking-wider flex items-center gap-2">
-                <ShieldCheck className="w-4.5 h-4.5 text-[#0F8F88]" /> Secure Fax Lines
+                <ShieldCheck className="w-4 h-4 text-[#0F8F88]" /> Secure Fax Lines
               </h4>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs font-bold text-slate-700">
                 <div className="space-y-0.5">
@@ -122,71 +135,43 @@ export default function Contact() {
           {!submitted ? (
             <form onSubmit={handleSubmit} className="space-y-5">
               <h3 className="text-lg font-black text-[#082B4D] border-b border-slate-100 pb-3">Schedule Free Assessment</h3>
-              
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="space-y-1.5">
                   <label className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">First Name *</label>
-                  <input 
-                    type="text" 
-                    required
-                    value={formData.firstName}
-                    onChange={(e) => setFormData({ ...formData, firstName: e.target.value })}
+                  <input type="text" name="firstName" required value={formData.firstName} onChange={handleChange}
                     placeholder="e.g., John"
-                    className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-xs font-semibold focus:outline-none focus:ring-1 focus:ring-[#082B4D]"
-                  />
+                    className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-xs font-semibold focus:outline-none focus:ring-1 focus:ring-[#082B4D]" />
                 </div>
                 <div className="space-y-1.5">
                   <label className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">Last Name</label>
-                  <input 
-                    type="text" 
-                    value={formData.lastName}
-                    onChange={(e) => setFormData({ ...formData, lastName: e.target.value })}
+                  <input type="text" name="lastName" value={formData.lastName} onChange={handleChange}
                     placeholder="e.g., Doe"
-                    className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-xs font-semibold focus:outline-none focus:ring-1 focus:ring-[#082B4D]"
-                  />
+                    className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-xs font-semibold focus:outline-none focus:ring-1 focus:ring-[#082B4D]" />
                 </div>
               </div>
-
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div className="space-y-1.5">
                   <label className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">Email Address *</label>
-                  <input 
-                    type="email" 
-                    required
-                    value={formData.email}
-                    onChange={(e) => setFormData({ ...formData, email: e.target.value })}
+                  <input type="email" name="email" required value={formData.email} onChange={handleChange}
                     placeholder="e.g., john.doe@example.com"
-                    className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-xs font-semibold focus:outline-none focus:ring-1 focus:ring-[#082B4D]"
-                  />
+                    className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-xs font-semibold focus:outline-none focus:ring-1 focus:ring-[#082B4D]" />
                 </div>
                 <div className="space-y-1.5">
                   <label className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">Phone Number</label>
-                  <input 
-                    type="tel" 
-                    value={formData.phone}
-                    onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
+                  <input type="tel" name="phone" value={formData.phone} onChange={handleChange}
                     placeholder="e.g., +1 (430) 257-0296"
-                    className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-xs font-semibold focus:outline-none focus:ring-1 focus:ring-[#082B4D]"
-                  />
+                    className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-xs font-semibold focus:outline-none focus:ring-1 focus:ring-[#082B4D]" />
                 </div>
               </div>
-
               <div className="space-y-1.5">
                 <label className="text-[10px] font-bold text-slate-400 uppercase tracking-wider block">Write a Message / Care Request Details</label>
-                <textarea 
-                  rows={5}
-                  value={formData.message}
-                  onChange={(e) => setFormData({ ...formData, message: e.target.value })}
+                <textarea rows={5} name="message" value={formData.message} onChange={handleChange}
                   placeholder="Tell us about your loved one's needs..."
-                  className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-xs font-semibold focus:outline-none focus:ring-1 focus:ring-[#082B4D]"
-                ></textarea>
+                  className="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-xs font-semibold focus:outline-none focus:ring-1 focus:ring-[#082B4D]"></textarea>
               </div>
-
-              <button 
-                type="submit"
-                className="w-full bg-[#082B4D] text-white text-xs font-bold py-4 rounded-xl shadow-lg hover:bg-[#0B7772] hover:scale-[1.01] transition-all cursor-pointer flex items-center justify-center gap-2"
-              >
-                Send Request <Send className="w-4 h-4" />
+              <button type="submit" disabled={submitting}
+                className="w-full bg-[#082B4D] text-white text-xs font-bold py-4 rounded-xl shadow-lg hover:bg-[#0B7772] hover:scale-[1.01] transition-all cursor-pointer flex items-center justify-center gap-2 disabled:opacity-60">
+                {submitting ? "Sending…" : <><Send className="w-4 h-4" /> Send Request</>}
               </button>
             </form>
           ) : (
@@ -198,10 +183,8 @@ export default function Contact() {
               <p className="text-slate-500 text-xs max-w-sm mx-auto leading-relaxed">
                 Thank you for contacting us, {formData.firstName}. Our care specialist will reach out to you shortly to coordinate your complimentary in-home assessment.
               </p>
-              <button 
-                onClick={() => setSubmitted(false)}
-                className="border border-slate-200 text-slate-600 text-xs font-bold px-6 py-2.5 rounded-xl hover:bg-slate-50 transition-all cursor-pointer"
-              >
+              <button onClick={() => { setSubmitted(false); setFormData({ firstName: "", lastName: "", email: "", phone: "", message: "" }); }}
+                className="border border-slate-200 text-slate-600 text-xs font-bold px-6 py-2.5 rounded-xl hover:bg-slate-50 transition-all cursor-pointer">
                 Send Another Message
               </button>
             </div>
