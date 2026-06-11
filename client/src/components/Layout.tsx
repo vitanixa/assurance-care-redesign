@@ -179,7 +179,7 @@ export default function Layout({ children }: LayoutProps) {
                 <Mail className="w-4 h-4 text-[#0F8F88] shrink-0 mt-0.5" />
                 <span className="leading-tight">
                   <a href="mailto:support@assurancecarellc.com" className="text-white hover:text-[#0F8F88] transition-colors">support@assurancecarellc.com</a><br/>
-                  <a href="mailto:assurancecare.24@gmail.com" className="text-white hover:text-[#0F8F88] transition-colors">assurancecare.24@gmail.com</a>
+                  <a href="mailto:admin@assurancecarellc.com" className="text-white hover:text-[#0F8F88] transition-colors">admin@assurancecarellc.com</a>
                 </span>
               </p>
               <p className="flex items-start gap-2">
